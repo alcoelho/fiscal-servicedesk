@@ -1,0 +1,53 @@
+<head>
+	<script>
+		function escondeDiv(nomeClasse) {
+			var display = document.getElementById(nomeClasse).style.display;
+        document.getElementById(nomeClasse).style.display = 'none';
+		}
+	</script>
+
+	<link rel="stylesheet" href="mystyle.css"/>
+</head>
+
+<body>
+	<h1>Solicitação de Nota Fiscal</h1>
+	<div name="origem-material">
+		<p>Origem do Material:
+		<select name="origem-material-opcoes">
+			<option value=" "></option>
+			<option value="material-proprio" onclick="escondeDiv("finalidade-terceiro")">Material Próprio</option>
+			<option value="material-terceiro">Material Terceiro</option>
+		</select>	
+	</div>
+
+	<div name="finalidade-proprio">
+		<p>Finalidade da MovimentaçãoP:
+		<select name="finalidade-proprio-opcoes">
+			<option value=" "></option>
+			<option value=" ">1</option>
+			<option value=" ">2</option>
+			<option value=" ">3</option>
+		</select>	
+	</div>
+
+	<div id="finalidade-terceiro">
+		<p>Finalidade da MovimentaçãoT:
+		<select name="finalidade-terceiro-opcoes">
+			<option value=" "></option>
+			<option value=" ">4</option>
+			<option value=" ">5</option>
+			<option value=" ">6</option>
+		</select>	
+	</div>
+
+	<div name="posicao-estoque">
+		<p>Posição de Estoque:
+		<select name="posicao">
+			<option value=" "></option>
+			<option value="posicao1">1</option>
+			<option value="posicao2">2</option>
+		</select>	
+	</div>
+
+
+</body>
