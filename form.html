@@ -1,19 +1,5 @@
 <head>
-	<script>
-		function escondeDiv(elemento) {
-			var selecionado = elemento.options[elemento.selectedIndex].value;
-			document.getElementById('finalidade-proprio0').style.display = 'none';
-
-			if (selecionado === 'proprio') {
-				document.getElementById('finalidade-proprio').style.display = 'block';
-				document.getElementById('finalidade-terceiro').style.display = 'none';
-			} else {
-				document.getElementById('finalidade-terceiro').style.display = 'block';
-				document.getElementById('finalidade-proprio').style.display = 'none';
-			}
-		}
-	</script>
-
+	<script src="script.js"></script>
 	<link rel="stylesheet" href="mystyle.css"/>
 </head>
 
@@ -132,12 +118,47 @@
 			</div>
 
 			<h4>Relação de Materiais</h4>
+			<table id="materiais">
+				<tr>
+					<th>Cód. Produto - Protheus</th>
+					<th>Descrição do Material</th>
+					<th>Número de Série</th>
+					<th>Quantidade</th>
+					<th>Valor Unitário</th>
+					<th>Valor Total</th>
+					<th>Nota Fiscal de Origem</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+				</tr>
+			</table>
+			<img id="add" src="https://image.freepik.com/free-icon/add-symbol_318-364.jpg" onclick="adicionaCampo()">
 
 
 			<h4>Observações (Informações Complementares da Nota Fiscal)</h4>
 			<div>
 				<label for="label-outras-infos">Outras informações</label>
-				<input type="text" id="outras-infos">
+				<input type="text" id="outras-infos" placeholder="Ex. Número Manifesto Resíduo, Indicar Responsável pelo Recebimento, etc...">
 			</div>
 
 
