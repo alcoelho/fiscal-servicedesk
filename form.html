@@ -22,7 +22,7 @@
 	<div name="origem-material">
 		<p>Origem do Material:
 		<select id="origem-material-opcoes" onchange="escondeDiv(document.getElementById('origem-material-opcoes'))">
-			<option value=" "></option>
+			<option></option>
 			<option value="proprio">Material Próprio</option>
 			<option value="terceiro">Material Terceiro</option>
 		</select>	
@@ -31,38 +31,114 @@
 	<div id="finalidade-proprio0">
 		<p>Finalidade da Movimentação:
 		<select name="finalidade-proprio-opcoes0">
-			<option value=" "></option>
+			<option></option>
 		</select>	
 	</div>
 
 	<div id="finalidade-proprio">
 		<p>Finalidade da Movimentação:
 		<select name="finalidade-proprio-opcoes">
-			<option value=" "></option>
-			<option value=" ">proprio1</option>
-			<option value=" ">proprio2</option>
-			<option value=" ">proprio3</option>
+			<option></option>
+			<option value=" ">Rem. Para Armazenagem</option>
+			<option value=" ">Rem. Para Reparo</option>
+			<option value=" ">Rem. Para Análise</option>
+			<option value=" ">Rem. Para Plataforma (Embarque Aéreo)</option>
+			<option value=" ">Rem. De Resíduo para Descarte</option>
+			<option value=" ">Transferência entre Filiais (Uso Consumo)</option>
+			<option value=" ">Transferência entre Filiais (Ativo)</option>
+			<option value=" ">Devolução Compra Uso e Consumo</option>
+			<option value=" ">Devolução Compra Ativo Imob.</option>
 		</select>	
 	</div>
 
 	<div id="finalidade-terceiro">
 		<p>Finalidade da Movimentação:
 		<select name="finalidade-terceiro-opcoes">
-			<option value=" "></option>
-			<option value=" ">terceiro1</option>
-			<option value=" ">terceiro2</option>
-			<option value=" ">terceiro3</option>
+			<option></option>
+			<option value=" ">Retorno Locação</option>
+			<option value=" ">Retorno Mat Prest. Serviço</option>
+			<option value=" ">Retorno Vasilhame</option>
+			<option value=" ">Devolução Física Consignação</option>
 		</select>	
 	</div>
 
 	<div name="posicao-estoque">
 		<p>Posição de Estoque:
 		<select name="posicao">
-			<option value=" "></option>
-			<option value="posicao1">1</option>
-			<option value="posicao2">2</option>
+			<option></option>
+			<option value="posicao1">Posição 1</option>
+			<option value="posicao2">Posição 2</option>
 		</select>	
 	</div>
+
+	<h4>Filial - Emissor de NF</h4>
+
+	<div id="filial-origem">
+		<p>Definir a Filial de Origem:
+		<select name="filial-origem-opcoes">
+			<option> </option>
+			<option value="origem1">Grupo de empresa 1</option>
+			<option value="origem2">Grupo de empresa 2</option>
+			<option value="origem3">Grupo de empresa 3</option>
+		</select>
+
+			<h4>Destinatário</h4>
+			<label for="label-cod-f-protheus">Código Fornecedor Protheus:</label>
+			<input type="text" id="cod-f-protheus" maxlength=5>
+
+			<h4>Transportador / Volumes Transportados</h4>
+			<div name="responsa-frete">
+				<p>Responsabilidade do Frete:
+				<select name="responsa-opcoes">
+					<option></option>
+					<option value="terceiro-fob">Terceiro (FOB)</option>
+					<option value="proprio-cif">PetroRio (CIF)</option>
+				</select>	
+			</div>
+
+			<div id="cod-transp-protheus">
+				<p>Código Transportador Protheus:
+				<select name="cod-transp-protheus-opcoes">
+					<option> </option>
+					<option value="cod1">Código 1</option>
+					<option value="cod2">Código 2</option>
+					<option value="cod3">Código 3</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="label-placa">Placa</label>
+				<input type="text" id="placa">
+			</div>
+
+			<div>
+				<label for="label-qtd-vol">Quantidade/Volume</label>
+				<input type="text" id="qtd-vol">
+			</div>
+
+			<div>
+				<label for="label-especie">Espécie</label>
+				<input type="text" id="especie">
+			</div>
+
+			<div>
+				<label for="label-peso-bruto">Peso Bruto</label>
+				<input type="text" id="peso-bruto">
+			</div>
+
+			<div>
+				<label for="label-peso-liquido">Peso Líquido</label>
+				<input type="text" id="peso-liquido">
+			</div>
+
+			<h4>Relação de Materiais</h4>
+
+
+			<h4>Observações (Informações Complementares da Nota Fiscal)</h4>
+			<div>
+				<label for="label-outras-infos">Outras informações</label>
+				<input type="text" id="outras-infos">
+			</div>
 
 
 </body>
