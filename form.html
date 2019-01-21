@@ -1,8 +1,16 @@
 <head>
 	<script>
-		function escondeDiv(nomeClasse) {
-			var display = document.getElementById(nomeClasse).style.display;
-        document.getElementById(nomeClasse).style.display = 'none';
+		function escondeDiv(elemento) {
+			var selecionado = elemento.options[elemento.selectedIndex].value;
+			document.getElementById('finalidade-proprio0').style.display = 'none';
+
+			if (selecionado === 'proprio') {
+				document.getElementById('finalidade-proprio').style.display = 'block';
+				document.getElementById('finalidade-terceiro').style.display = 'none';
+			} else {
+				document.getElementById('finalidade-terceiro').style.display = 'block';
+				document.getElementById('finalidade-proprio').style.display = 'none';
+			}
 		}
 	</script>
 
@@ -13,30 +21,37 @@
 	<h1>Solicitação de Nota Fiscal</h1>
 	<div name="origem-material">
 		<p>Origem do Material:
-		<select name="origem-material-opcoes">
+		<select id="origem-material-opcoes" onchange="escondeDiv(document.getElementById('origem-material-opcoes'))">
 			<option value=" "></option>
-			<option value="material-proprio" onclick="escondeDiv("finalidade-terceiro")">Material Próprio</option>
-			<option value="material-terceiro">Material Terceiro</option>
+			<option value="proprio">Material Próprio</option>
+			<option value="terceiro">Material Terceiro</option>
 		</select>	
 	</div>
 
-	<div name="finalidade-proprio">
-		<p>Finalidade da MovimentaçãoP:
+	<div id="finalidade-proprio0">
+		<p>Finalidade da Movimentação:
+		<select name="finalidade-proprio-opcoes0">
+			<option value=" "></option>
+		</select>	
+	</div>
+
+	<div id="finalidade-proprio">
+		<p>Finalidade da Movimentação:
 		<select name="finalidade-proprio-opcoes">
 			<option value=" "></option>
-			<option value=" ">1</option>
-			<option value=" ">2</option>
-			<option value=" ">3</option>
+			<option value=" ">proprio1</option>
+			<option value=" ">proprio2</option>
+			<option value=" ">proprio3</option>
 		</select>	
 	</div>
 
 	<div id="finalidade-terceiro">
-		<p>Finalidade da MovimentaçãoT:
+		<p>Finalidade da Movimentação:
 		<select name="finalidade-terceiro-opcoes">
 			<option value=" "></option>
-			<option value=" ">4</option>
-			<option value=" ">5</option>
-			<option value=" ">6</option>
+			<option value=" ">terceiro1</option>
+			<option value=" ">terceiro2</option>
+			<option value=" ">terceiro3</option>
 		</select>	
 	</div>
 
